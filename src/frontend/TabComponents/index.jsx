@@ -75,10 +75,12 @@ const styles = StyleSheet.create({
     flex: '1 1 auto',
     display: 'flex',
     flexDirection: 'column',
+    overflow: 'hidden',
   },
   panelBody: {
     display: 'flex',
     flex: '1 1 auto',
+    height: '100%',
   },
   leftPane: {
     flex: 1,
