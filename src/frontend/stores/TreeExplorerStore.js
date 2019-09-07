@@ -248,7 +248,7 @@ export default class TreeExplorerStore extends AbstractStore {
     }
     const id = this.hoveredNodeId;
     this.hoveredNodeId = null;
-    this.emit(id);
+    this.selectedNodeId !== id && this.emit(id); // eslint-disable-line
     this.emit('hoveredNodeId');
   }
 
@@ -260,7 +260,7 @@ export default class TreeExplorerStore extends AbstractStore {
       if (old) {
         this.emit(old);
       }
-      this.emit(id);
+      this.selectedNodeId !== id && this.emit(id); // eslint-disable-line
       this.emit('hoveredNodeId');
       this.highlight(id);
     } else if (this.hoveredNodeId === id) {
