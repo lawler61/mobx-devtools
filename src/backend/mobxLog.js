@@ -11,6 +11,7 @@ const summary = (change) => {
   sum.name = change.name;
   sum.objectName = change.objectName;
   sum.oldValue = change.oldValue;
+  sum.key = change.key;
   sum.newValue = change.newValue;
   sum.hasChildren = change.children.length > 0;
   sum.timestamp = change.timestamp;
